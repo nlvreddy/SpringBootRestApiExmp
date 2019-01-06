@@ -4,17 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.home</groupId>
-	<artifactId>SpringBootRestApiExample</artifactId>
+	<artifactId>SpringBootRestApiExmp</artifactId>
 	<version>1.0_SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>SpringBootRestApiExampleWAR</name>
+	<name>SpringBootRestApiExmpWAR</name>
 
-	<parent>
+	   <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.3.RELEASE</version>
-	</parent>
+	</parent> 
 
 	<properties>
 		
@@ -33,15 +33,25 @@
 	<dependencies>
 		<!-- Add typical dependencies for a web application -->
 		<!-- Adds Tomcat and Spring MVC, along others -->
-		<dependency>
+		
+		<!--   <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+		</dependency> -->
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		
+		 <dependency>
+       <groupId>javax.servlet</groupId>
+       <artifactId>javax.servlet-api</artifactId>
+       <version>3.1.0</version>
+       <scope>provided</scope>
+   </dependency>
+   
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
@@ -51,12 +61,7 @@
       <artifactId>appengine-api-1.0-sdk</artifactId>
       <version>${appengine.target.version}</version>
     </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
-      <scope>provided</scope>
-    </dependency>
+  
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -93,12 +98,14 @@
 	<build>
 	 <outputDirectory>target/${project.artifactId}/WEB-INF/classes</outputDirectory> 
 		<plugins>
-			<plugin><!-- Include if you want to make an executable jar[FAT JAR which 
+			 <!--   <plugin> -->
+			  <!-- Include if you want to make an executable jar[FAT JAR which 
 					includes all dependencies along with sprinboot loader] that you can run on 
 					commandline using java -jar NAME -->
-				<groupId>org.springframework.boot</groupId>
+				<!--  <groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+			</plugin> -->
+			
 			<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
